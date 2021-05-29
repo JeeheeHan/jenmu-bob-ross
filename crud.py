@@ -34,11 +34,7 @@ def break_down_hex_colors(item):
     return hexes
 
 
-
 ####Take me there page#####
-
-
-
 
 
 if __name__ == '__main__':

@@ -1,6 +1,6 @@
 """Server"""
 
-from flask import Flask, render_template, request, redirect, jsonify, request, flash, jsonify
+from flask import Flask, render_template, request, redirect, jsonify, request, flash, jsonify, url_for
 from jinja2 import StrictUndefined
 
 import crud
@@ -39,7 +39,24 @@ def show_another_quote():
     new_paint = crud.get_random_painting()
     new_colors = crud.break_down_hex_colors(new_paint)
 
-    return jsonify( {'quote':quote, 'new_paint': new_paint.img_src, 'new_colors':str(new_colors)} )
+    new_video_link = new_paint.youtube_src
+
+    return jsonify( {'quote':quote,\
+            'new_paint': new_paint.img_src,\
+            'new_colors':new_colors,\
+            'vid_link':new_video_link} )
+
+
+
+@app.route('/drawing', methods=["POST"])
+def show_painting_page():
+    """Render user paint-along page."""
+    if request.method == "POST":
+        paintingURL= request.form['paintingURL']
+        youtubeURL = request.form['youtubeURL']
+    print(paintingURL)
+    print(youtubeURL)
+    return render_template("drawing.html", youtubeURL = youtubeURL, paintingURL = paintingURL )
 
 
 if __name__ == '__main__':
