@@ -20,8 +20,11 @@ def index():
     """Render to the homepage"""
     
     quote = crud.get_random_quote()
+    painting = crud.get_random_painting()
 
-    return render_template("homepage.html",quote=quote)
+    return render_template("homepage.html",
+                           quote=quote, 
+                           painting=painting)
 
 
 @app.route('/bobquotes', methods=["GET"])
@@ -29,8 +32,9 @@ def show_another_quote():
     """Server response to AJAX and get another quote"""
 
     quote = crud.get_random_quote()
-    
+
     return jsonify({'quote':quote})
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
