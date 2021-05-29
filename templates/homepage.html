@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
+
 {% endblock %}
 
 {% block content %}
@@ -17,14 +18,20 @@
 
         <button type="button" id ="more" class="btn btn-outline-success" >Another Quote</button>
     </div>
-    <div class="colorContain">
+
+
+    <div class="row content" id="colorContain">
       {% for color in list_hex %}
-      <p>
-        {{ color }}
-      </p>
+      <div class="col" style="background-color: {{ color }}">Color</div>
       {% endfor %}
 
     </div>
+    <form action="/drawing" id="nextpageform" method="POST">
+      <input type="hidden" name='paintingURL' class="chosenPainting" id="paintingURL" value="{{ painting.img_src }}"/>
+      <input type="hidden" name='youtubeURL' class="chosenPainting" id="youtubeURL" value="{{ painting.youtube_src }}"/>
+      <input type="submit" value="Take me there"/>
+    </form>
+
 
   </div>
 </div>
