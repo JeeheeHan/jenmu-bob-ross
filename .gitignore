@@ -3,3 +3,7 @@ env/
 .DS_Store
 secrets.sh
 Bob_Ross_Paintings/
+__pycache__
+images/
+img/
+node_modules/

@@ -1,13 +1,104 @@
 body {
 
-    font-family: 'Open Sans', sans-serif;
-    background-color: aquamarine;
+    font-family: 'Satisfy', cursive;
+    background: url('/static/images/bob_ross.png') right bottom no-repeat;
 
   }
 
-#currentQuote {
 
+#currentQuote {
     font-size: 50px;
-    color: darkgreen;
+    color: rgb(0, 0, 0);
+}
+
+#mainrow{
+  align-items: center;
+}
+
+.background-image {
+  position: relative;
+}
+.background-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width:100%;
+}
+
+#currentImage{
+  border: 20px solid rgb(165, 117, 70);
+}
+
+/* .indexpage {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: url('/static/images/door-wall.jpg');
+  background-position: center;
+  background-size: 150% 110%;
+} */
+
+
+.app {
+
+  width:650px;
+  height: 650px;
+  font-family:"Raleway", sans-serif;
+
+}
+
+.app .controls {
+  height:50px;
+  display:flex;
+  align-items: center;
+  background: #ddd;
+  padding:0px, 10px
+}
+
+.app .controls .title {
+  font-weight: 600;
+  color:#222;
+  width:80px
+}
+
+.app .controls .type,
+.app .controls .size,
+.app .controls .color {
+  margin:0px 10px;
+}
+
+.app .controls .type input {
+  display:none;
+}
+
+.app .controls .type label {
+  width:30px;
+  height:30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  margin: 0px 2px;
+  cursor: pointer;
+}
+
+.app .controls .type input:checked +
+label {
+  background: #111;
+  color: #eee;
+  border-radius: 50%;
+}
+
+.app .controls .size input {
+  height:10px;
+}
+
+.app .controls .actions {
+  flex:1;
+  text-align: right;
+}
+
+.app .controls .actions button {
+  padding: 5px 10px;
+  cursor: pointer;
 
 }
