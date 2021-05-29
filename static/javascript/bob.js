@@ -10,19 +10,22 @@ $(window).on('load', ()=>{
     });
 
     morequotes.done((res) => {
-      $('#currentQuote').html(res.quote)
-      $('#new_image').html('<img id="currentImage" src="{res.new_paint}">')
-
-      res.new_colors (string of a list)
-
-  
+      //Input quote, img and colors into page per button click
+      $('#currentQuote').html(res.quote);
+      $('#new_image').html('<img id="currentImage" src='+res.new_paint+'>');
+      $('#colorContain').empty();
+      for (item of res.new_colors){
+        $('#colorContain').append('<div class="col" style="background-color:'+item+'">color</div>');      
+      };
+      $('input#paintingURL').val(res.new_paint)
+      $('input#youtubeURL').val(res.vid_link)
 
     });
   });
 
   
 
-  
-
-
 });
+
+
+
