@@ -7,15 +7,25 @@
 <div class="indexpage">
   <div class="container">
     <div class="row content">
-      <img id="currentImage" src="{{ painting }}" class="img-fluid" alt="...">
+      <div id = "new_image">
+        <img id="currentImage" src="{{ painting.img_src }}" class="img-fluid" alt="...">
+      </div>
     </div>
 
     <div class="row content">
         <p id="currentQuote">{{quote}}</p>
 
         <button type="button" id ="more" class="btn btn-outline-success" >Another Quote</button>
+    </div>
+    <div class="colorContain">
+      {% for color in list_hex %}
+      <p>
+        {{ color }}
+      </p>
+      {% endfor %}
 
     </div>
+
   </div>
 </div>
 

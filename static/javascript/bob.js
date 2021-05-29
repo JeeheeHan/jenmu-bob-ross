@@ -11,10 +11,16 @@ $(window).on('load', ()=>{
 
     morequotes.done((res) => {
       $('#currentQuote').html(res.quote)
+      $('#new_image').html('<img id="currentImage" src="{res.new_paint}">')
+
+      res.new_colors (string of a list)
+
+  
 
     });
   });
 
+  
 
   
 

@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, jsonify, request, f
 from jinja2 import StrictUndefined
 
 import crud
-from model import db, connect_to_db
+from model import Painting, db, connect_to_db
 
 
 app = Flask(__name__)
@@ -22,11 +22,13 @@ def index():
     
     quote = crud.get_random_quote()
     painting = crud.get_random_painting()
-    print(painting.img_src)
+    list_hex = crud.break_down_hex_colors(painting)
+
 
     return render_template("homepage.html",
                            quote=quote, 
-                           painting=painting.img_src)
+                           painting=painting, 
+                           list_hex=list_hex)
 
 
 @app.route('/bobquotes', methods=["GET"])
@@ -34,8 +36,10 @@ def show_another_quote():
     """Server response to AJAX and get another quote"""
 
     quote = crud.get_random_quote()
+    new_paint = crud.get_random_painting()
+    new_colors = crud.break_down_hex_colors(new_paint)
 
-    return jsonify({'quote':quote})
+    return jsonify( {'quote':quote, 'new_paint': new_paint.img_src, 'new_colors':str(new_colors)} )
 
 
 if __name__ == '__main__':
