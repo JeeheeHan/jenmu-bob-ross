@@ -7,7 +7,7 @@
 
 {% block content %}
 <div class="drawing">
-  <div class="container-fluid">
+  <div class="container-fluid mt-2 border border-5" style="max-width: 1180px;">
     <div class="d-flex flex-row justify-content-around">
 
       <!-- Col for youtube and painting -->
@@ -23,10 +23,10 @@
         </div>
       </div>
       <!-- Col for canvas -->
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column mt-2 me-2">
         <div class="app">
           <div class="controls">
-            <div class="title">Paint</div>
+            <div class="title ms-3">Paint</div>
             <div class="type">
 
               <input type="radio" name="pen-type" id="pen-pencil" checked>
@@ -42,19 +42,19 @@
             </div>
 
             <div class="size">
-              <label for="pen-size">Size</label>
+              <label for="pen-size" style="color: rgb(0, 112, 0)">Size</label>
               <input type="range" id="pen-size" min="1" max="50">
 
             </div>
 
             <div class="color">
-              <label for="pen-Color">Color</label>
+              <label for="pen-Color" style="color: rgb(0, 112, 0)">Color</label>
               <input type="color" id="pen-color" value="#000">
             </div>
 
-            <div class="actions">
-              <button id="reset-canvas">Reset</button>
-              <button id="save-canvas">Save</button>
+            <div class="actions me-2">
+              <button class="btn btn-outline-success" id="reset-canvas">Reset</button>
+              <button class="btn btn-outline-success" id="save-canvas">Save</button>
             </div>
           </div>
           <div id="canvas-wrapper"></div>
@@ -66,7 +66,7 @@
 </div>
 
 <div class="footer pt-5" id="footer">
-  <div class="footer-copyright text-center py-3">© BOB BOB BOB </div>  
+  <div class="footer-copyright text-center py-3">© J e n M u </div>  
 </div>
   <script src="/static/javascript/drawing.js"></script>
 

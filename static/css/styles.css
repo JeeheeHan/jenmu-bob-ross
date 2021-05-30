@@ -25,7 +25,9 @@ body .drawing{
 
 #mainrow{
   align-items: center;
-  margin:10%;
+  margin-top:10%;
+  margin-left: 10%;
+  margin-right: 10%;
   text-align: center;
 }
 
@@ -69,7 +71,7 @@ body .drawing{
   background-size: 150% 110%;
 } */
 
-.btn {
+.front-pg {
   border: none;
   font-size: 40px;
   color: rgb(235, 255, 224);
@@ -88,13 +90,13 @@ body .drawing{
   height:50px;
   display:flex;
   align-items: center;
-  background: white;
-  padding:0px, 10px
+  background: rgb(211, 255, 207);
+  padding:0px, 10px;
 }
 
 .app .controls .title {
   font-weight: 600;
-  color:#222;
+  color: rgb(0, 112, 0);
   width:80px
 }
 
@@ -116,17 +118,19 @@ body .drawing{
   line-height: 30px;
   margin: 0px 2px;
   cursor: pointer;
+  color: rgb(0, 112, 0)
 }
 
 .app .controls .type input:checked +
 label {
-  background: #111;
+  background: rgb(0, 112, 0);
   color: #eee;
   border-radius: 50%;
 }
 
 .app .controls .size input {
   height:10px;
+  
 }
 
 .app .controls .actions {
