@@ -23,10 +23,10 @@
             <p id="currentQuote">{{quote}}</p>
       </div>
     </div>
-    <div class="row text-center">
+    <div class="row" id="mainQuote">
 
-        <div class="col">
-          <button type="button" id="more" class="btn btn-outline-success btn-lg">Another Quote</button>
+        <div class="col" style="text-align: end;">
+          <button type="button" id="more" class="btn btn-outline-success btn-lg">Show me something new</button>
         </div>
   
         <div class="col">
@@ -35,7 +35,7 @@
                 value="{{ painting.img_src }}" />
               <input type="hidden" name='youtubeURL' class="chosenPainting" id="youtubeURL"
                 value="{{ painting.youtube_src }}" />
-              <button class="btn btn-outline-success btn-lg" type="submit">Paint</button>
+              <button class="btn btn-outline-success btn-lg" type="submit">Let's go paint with Bob Ross</button>
             </form>
         </div>
   

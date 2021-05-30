@@ -7,75 +7,67 @@
 
 {% block content %}
 <div class="drawing">
-    <div class="container-fluid">
-        <div class="row content">
-          
-          <div class="col">
+  <div class="container-fluid">
+    <div class="d-flex flex-row justify-content-around">
 
-            <!-- <div class="d-flex">
-              <div class="p-2">
-                <iframe width="420" height="315" src="{{youtubeURL}}">
-                </iframe>
-              </div>
-              <div class="p-2">
-                <div class="img-container">
-                  <img id="paintingToDraw" src="{{ paintingURL }}" class="img-fluid">
-                </div>
-              </div>
-            </div> -->
-
-
-
-            <div class="row" style="height:400px">
-                <iframe width="420" src="{{youtubeURL}}"></iframe>
-              </div>
-            <div class= "row" style="height:400px">
-                  <img id="paintingToDraw" src="{{ paintingURL }}" class="img-fluid">
-            </div>
-          </div>
-
-
-          <div class="col">
-
-            <div class="app">
-              <div class="controls">
-                <div class="title">Paint</div>
-                <div class="type">
-
-                  <input type="radio" name="pen-type" id="pen-pencil" checked>
-                  <label for="pen-pencil">
-                    <i class="fas fa-pencil-alt"></i>
-                  </label>
-
-                  <input type="radio" name="pen-type" id="pen-brush" checked>
-                  <label for="pen-brush">
-                    <i class="fa fa-paint-brush"></i>
-                  </label>
-
-                </div>
-
-                <div class="size">
-                  <label for="pen-size">Size</label>
-                  <input type="range" id="pen-size" min="1" max="50">
-
-                </div>
-
-                <div class="color">
-                  <label for="pen-Color">Color</label>
-                  <input type="color" id="pen-color" value="#000">
-                </div>
-
-                <div class="actions">
-                  <button id="reset-canvas">Reset</button>
-                  <button id="save-canvas">Save</button>
-                </div>
-            </div>
-            <div id="canvas-wrapper"></div>
+      <!-- Col for youtube and painting -->
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <iframe width="450" height="315" src="{{youtubeURL}}">
+          </iframe>
+        </div>
+        <div class="p-2">
+          <div class="img-container">
+            <img id="paintingToDraw" src="{{ paintingURL }}" class="img-fluid">
           </div>
         </div>
+      </div>
+      <!-- Col for canvas -->
+      <div class="d-flex flex-column">
+        <div class="app">
+          <div class="controls">
+            <div class="title">Paint</div>
+            <div class="type">
+
+              <input type="radio" name="pen-type" id="pen-pencil" checked>
+              <label for="pen-pencil">
+                <i class="fas fa-pencil-alt"></i>
+              </label>
+
+              <input type="radio" name="pen-type" id="pen-brush" checked>
+              <label for="pen-brush">
+                <i class="fa fa-paint-brush"></i>
+              </label>
+
+            </div>
+
+            <div class="size">
+              <label for="pen-size">Size</label>
+              <input type="range" id="pen-size" min="1" max="50">
+
+            </div>
+
+            <div class="color">
+              <label for="pen-Color">Color</label>
+              <input type="color" id="pen-color" value="#000">
+            </div>
+
+            <div class="actions">
+              <button id="reset-canvas">Reset</button>
+              <button id="save-canvas">Save</button>
+            </div>
+          </div>
+          <div id="canvas-wrapper"></div>
+        </div>
+      </div>
+
     </div>
   </div>
+</div>
 
+<div class="footer pt-5" id="footer">
+  <div class="footer-copyright text-center py-3">© BOB BOB BOB </div>  
+</div>
   <script src="/static/javascript/drawing.js"></script>
 
 {% endblock %}
