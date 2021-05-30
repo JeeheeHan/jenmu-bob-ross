@@ -5,53 +5,59 @@
 {% endblock %}
 
 {% block content %}
-<div class="background-image">
-</div>
 
-  <div class="container">
-    <div class="row" id="mainrow">
-      <div class="col" id="2">
-        <div class="d-flex justify-content-center">
-          <div id="new_image">
-            <img id="currentImage" src="{{ painting.img_src }}" class="img-fluid" alt="...">
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="d-flex flex-column" id="3">
-          <div class="p-2">
-            <button type="button" id="more" class="btn btn-outline-success">Another Quote</button>
-          </div>
-          <div class="p-2">
-            <p id="currentQuote">{{quote}}</p>
-          </div>
-        </div>
-      </div>
+  <div class="container fluid">
+    <!-- BACKGROUND PAINTING -->
+    <div class="background-image" id="background-image">
+      <img id="currentImage" src="{{ painting.img_src }}" class="img-fluid">
     </div>
-
+    
+    <!-- BOB ROSS FIXED -->
+    <div class="bob" id="bob">
+      <img id="bob_ross" src="/static/images/bob_ross.png">
+    </div>
   
-      <div class="colors-list">
-        <div class="col-6">
-        <div class="row content" id="colorContain">
-          {% for color in list_hex %}
-          <div class="col" style="background-color: {{ color }}; color:{{ color }}">Color</div>
-          {% endfor %}
-        </div>
-        </div>
-
-        <form action="/drawing" id="nextpageform" method="POST">
-          <input type="hidden" name='paintingURL' class="chosenPainting" id="paintingURL"
-            value="{{ painting.img_src }}" />
-          <input type="hidden" name='youtubeURL' class="chosenPainting" id="youtubeURL"
-            value="{{ painting.youtube_src }}" />
-          <input type="submit" value="Take me there" />
-        </form>
+    <!-- ROW 1 -->
+    <div class="row" id="mainrow">
+      <div class="col">
+            <p id="currentQuote">{{quote}}</p>
       </div>
-
     </div>
+    <div class="row text-center">
 
+        <div class="col">
+          <button type="button" id="more" class="btn btn-outline-success btn-lg">Another Quote</button>
+        </div>
+  
+        <div class="col">
+            <form action="/drawing" id="nextpageform" method="POST">
+              <input type="hidden" name='paintingURL' class="chosenPainting" id="paintingURL"
+                value="{{ painting.img_src }}" />
+              <input type="hidden" name='youtubeURL' class="chosenPainting" id="youtubeURL"
+                value="{{ painting.youtube_src }}" />
+              <button class="btn btn-outline-success btn-lg" type="submit">Paint</button>
+            </form>
+        </div>
+  
+    </div>
+  </div>
+  
+  
+  <!-- FOOTER HERE -->
 
+<div class="footer pt-5" id="footer">
+  <div class="footer-copyright text-center py-3">© BOB BOB BOB </div>  
+  
+  <div class="colors-list">
+    <div class="col">
+      <div class="row content" id="colorContain">
+        {% for color in list_hex %}
+        <div class="col" style="background-color: {{ color }}; color:{{ color }}">Color</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>  
+</div>
 
 
 

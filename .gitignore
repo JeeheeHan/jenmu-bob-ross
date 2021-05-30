@@ -4,6 +4,6 @@ env/
 secrets.sh
 Bob_Ross_Paintings/
 __pycache__
-images/
+# images/
 img/
 node_modules/

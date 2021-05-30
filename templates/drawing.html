@@ -11,15 +11,29 @@
         <div class="row content">
           
           <div class="col">
-            <div class="row" style="height:400px">
-                <iframe width="420" height="315"
-                  src="{{youtubeURL}}">
+
+            <!-- <div class="d-flex">
+              <div class="p-2">
+                <iframe width="420" height="315" src="{{youtubeURL}}">
                 </iframe>
               </div>
-            <div class= "row">
-                hi
+              <div class="p-2">
+                <div class="img-container">
+                  <img id="paintingToDraw" src="{{ paintingURL }}" class="img-fluid">
+                </div>
+              </div>
+            </div> -->
+
+
+
+            <div class="row" style="height:400px">
+                <iframe width="420" src="{{youtubeURL}}"></iframe>
+              </div>
+            <div class= "row" style="height:400px">
+                  <img id="paintingToDraw" src="{{ paintingURL }}" class="img-fluid">
             </div>
           </div>
+
 
           <div class="col">
 
@@ -62,6 +76,6 @@
     </div>
   </div>
 
-
+  <script src="/static/javascript/drawing.js"></script>
 
 {% endblock %}
