@@ -19,7 +19,7 @@ body .drawing{
 #currentQuote {
     font-size: 50px;
     color: rgb(255, 255, 255);
-    text-shadow: -1px 0 rgb(106, 226, 176), 0 1px rgb(120, 175, 112), 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 rgb(106, 226, 176), 0 1px rgb(120, 175, 112), 1px 0 black, 0 -1px black,  3px 3px 5px black;;
 
 }
 
