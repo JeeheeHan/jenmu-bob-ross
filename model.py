@@ -7,15 +7,8 @@ import os
 
 db = SQLAlchemy()
 
-#     painting_index
-#     img_src
-#     painting_title
-#     colors : name of the colors
-#     youtube_src 
-#     colors_hex : list of the CSS colors
 
-
-
+#### Helper function to create DB######
 def connect_to_db(flask_app, db_uri = os.environ.get('DATABASE_URL'), echo=True):
     if db_uri.startswith("postgres://"):
         db_uri = db_uri.replace("postgres://", "postgresql://", 1)
@@ -31,7 +24,7 @@ def connect_to_db(flask_app, db_uri = os.environ.get('DATABASE_URL'), echo=True)
     print('Connect to DB!')
 
 class Painting(db.Model):
-    
+    """Painting Table that stores cols and row from csv file"""
     __tablename__ = "paintings"
 
     painting_index = db.Column(db.String,
@@ -41,12 +34,6 @@ class Painting(db.Model):
     colors = db.Column(db.String)
     youtube_src = db.Column(db.String)
     color_hex = db.Column(db.String)
-
-    # def add_image_to_db(self, __tablename__):
-    #     """ Saving CSV into DB using panda lib """
-
-    #     f = pandas.read_csv('./data/shortened_BR.csv')
-    #     f.to_sql('paintings',os.environ.get('DATABASE_URL'), if_exists='replace', echo=False)
     
     def __repr__(self):
         return f'<Painting Index:{self.painting_index} Title:{self.painting_title}>'

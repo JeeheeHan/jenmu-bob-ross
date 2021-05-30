@@ -1,4 +1,4 @@
-
+"""Seed Data into DB """
 from model import db, connect_to_db
 import pandas
 import os

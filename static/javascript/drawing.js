@@ -1,11 +1,12 @@
+//Custom function to call dom elements
 function _(selector){
     return document.querySelector(selector);
-  }
+  };
   function setup(){
     let canvas = createCanvas(700, 627);
     canvas.parent("canvas-wrapper");
     background(255);
-  }
+  };
   function mouseDragged(){
     let type = _("#pen-pencil").checked?"pencil":"brush";
     let size = parseInt(_("#pen-size").value);
@@ -17,8 +18,8 @@ function _(selector){
     } else {
       ellipse(mouseX, mouseY, size, size)
     }
-  }
-  
+  };
+  //Event listeners for the canvas
   _("#reset-canvas").addEventListener("click",function(){
     background(255);
   });
