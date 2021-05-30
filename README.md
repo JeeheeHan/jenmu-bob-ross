@@ -18,6 +18,15 @@
 ### Overview
 <a name="Overview"></a>
 We are presenting a full stack web application that allow any users to explore the quotes from Bob Ross and paint on a canvas with a video tutorial. Painting is a creative hobby that comes with numerous mental health benefits like relieving stress, expands creativity, and cultivates emotional growth. And a key icon in the world of painting is Bob Ross. Back in the 90s, we all got to enjoy episodes of his show: The Joy of Painting. Even though, Bob Ross is not with us today, his passion and guidance in painting are still an inspiration for others to paint.  So, this app is built to honor his work and share some of his best ideas via technology. We hope to provide a safe haven to destress and put our imaginations at work. 
+<br>
+<br>
+
+#### Video Demo: <br> 
+
+https://www.youtube.com/watch?v=z0__LwXnono
+<br>
+<br>
+<br>
 
 ***Meet Bob Ross and read his best quotes. A new painting will show for every re-quote. Footer will also change colors based on the painting.***
 <br>
