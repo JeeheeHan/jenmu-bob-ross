@@ -38,7 +38,7 @@ We are presenting a full stack web application that allow any users to explore t
 ![](./demo/octobobRoss.png)
 <br>
 
-***Here are some our favorites!***
+***Here are some favorites!***
 <br>
 By Muna:<br>
 <br>
